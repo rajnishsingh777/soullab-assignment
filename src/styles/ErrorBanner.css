@@ -1,0 +1,106 @@
+/* ===================================
+   ERROR BANNER STYLES
+   =================================== */
+
+.error-banner {
+  position: relative;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(254, 44, 85, 0.15) 0%, rgba(254, 44, 85, 0.08) 100%);
+  border: 2px solid rgba(254, 44, 85, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  animation: fadeIn 0.3s ease, slideInFromRight 0.3s ease;
+  box-shadow: 0 4px 16px rgba(254, 44, 85, 0.2);
+}
+
+.error-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+}
+
+.error-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.error-message-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.error-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--tiktok-pink);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.error-description {
+  font-size: 14px;
+  color: var(--tiktok-white);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.dismiss-button {
+  width: 28px;
+  height: 28px;
+  background: rgba(254, 44, 85, 0.2);
+  border: 1px solid rgba(254, 44, 85, 0.3);
+  border-radius: 50%;
+  color: var(--tiktok-pink);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.dismiss-button:hover {
+  background: rgba(254, 44, 85, 0.3);
+  border-color: var(--tiktok-pink);
+  transform: scale(1.1);
+}
+
+.dismiss-button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .error-banner {
+    padding: 16px 18px;
+  }
+
+  .error-icon {
+    font-size: 20px;
+  }
+
+  .error-title {
+    font-size: 13px;
+  }
+
+  .error-description {
+    font-size: 13px;
+  }
+
+  .dismiss-button {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+  }
+}
